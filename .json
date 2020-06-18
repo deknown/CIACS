@@ -5,17 +5,21 @@
 		},
 	"ip": "",
 	"hardware": {
-		"motherboard": {
-			"manufacturer": "",
-			"name": ""
-		},
-		"cpu": {
-			"manufacturer": "",
-			"name": "",
-			"cores": 0,
-			"threads": 0,
-			"speed": 0
-		},
+		"motherboards": [
+			{
+				"manufacturer": "",
+				"name": ""
+			}
+		],
+		"cpus": [
+			{
+				"manufacturer": "",
+				"name": "",
+				"cores": 0,
+				"threads": 0,
+				"speed": 0
+			}
+		],
 		"gpus": [
 			{
 				"manufacturer": "",
