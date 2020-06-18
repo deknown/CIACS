@@ -23,7 +23,8 @@
 		"gpus": [
 			{
 				"manufacturer": "",
-				"name": ""
+				"name": "",
+				"capacity": 0
 			}
 		],
 		"rams": [
@@ -36,8 +37,8 @@
 		"disks": [
 			{
 				"type": "",
-				"size": 0,
-				"bus": ""
+				"bus": "",
+				"capacity": 0
 			}
 		]
 	},
