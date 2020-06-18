@@ -30,6 +30,7 @@
 		"rams": [
 			{
 				"manufacturer": "",
+				"name": "",
 				"type": null,
 				"capacity": 0
 			}
