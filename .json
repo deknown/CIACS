@@ -1,0 +1,48 @@
+{
+	"general": {
+		"id": 0,
+		"location": {
+
+		},
+		"ip": ""
+	},
+	"hardware": {
+		"motherboard": {
+			"manufacturer": "",
+			"name": ""
+		},
+		"cpu": {
+			"manufacturer": "",
+			"name": "",
+			"cores": 0,
+			"threads": 0,
+			"speed": 0
+		},
+		"gpus": [
+			{
+				"manufacturer": "",
+				"name": ""
+			}
+		],
+		"rams": [
+			{
+				"manufacturer": "",
+				"type": null,
+				"capacity": 0
+			}
+		],
+		"disks": [
+			{
+				"type": "",
+				"size": 0,
+				"bus": ""
+			}
+		]
+	},
+	"software": [
+		{
+			"name": "",
+			"version": ""
+		}
+	]
+}
