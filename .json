@@ -2,8 +2,13 @@
 	"id": "",
 	"location": {
 
-		},
+	},
 	"ip": "",
+	"os": {
+		"name": "",
+		"build": "",
+		"bits": 0
+	},
 	"hardware": {
 		"motherboards": [
 			{
@@ -17,7 +22,8 @@
 				"name": "",
 				"cores": 0,
 				"threads": 0,
-				"speed": 0
+				"speed": 0,
+				"bits": 0
 			}
 		],
 		"gpus": [
@@ -38,7 +44,6 @@
 		"disks": [
 			{
 				"type": "",
-				"bus": "",
 				"capacity": 0
 			}
 		]
