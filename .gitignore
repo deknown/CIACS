@@ -14,15 +14,14 @@
 *.userprefs
 
 # Build results
-#[Dd]ebug/
+[Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/[Dd]ebug/
-#[Bb]in/
+[Bb]in/
 [Oo]bj/
 [Ll]og/
 
@@ -337,3 +336,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+*.json
+logs.
