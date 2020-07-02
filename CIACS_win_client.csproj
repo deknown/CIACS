@@ -110,15 +110,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CIACS\CIACSlib.csproj">
-      <Project>{323af961-f7f4-4755-b6e8-e49810c2d425}</Project>
-      <Name>CIACSlib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="CIACSlib\CIACSlib.csproj">
+      <Project>{323af961-f7f4-4755-b6e8-e49810c2d425}</Project>
+      <Name>CIACSlib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

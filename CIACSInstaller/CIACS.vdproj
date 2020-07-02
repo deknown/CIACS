@@ -15,32 +15,20 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0B53E14A3AD945D6AB854FEAB78826DF"
+        "MsmKey" = "8:_354BD3D1936C45E9B9332B20F6C13574"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1EDF541999F94FD986D23E13BB18736C"
+        "MsmKey" = "8:_52C52A1C6524F846C05E7BE941A53E56"
+        "OwnerKey" = "8:_FFF96E3D8ED44D50A26FAF49AC01E2FF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7BB1E0084B2445CD83648A3C7A029397"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_27E7C93C5FC74E76975AA8B610143140"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3D66E2B790C32758741F2A338CCC95D2"
-        "OwnerKey" = "8:_1EDF541999F94FD986D23E13BB18736C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7947B6560C65250398C75769D7FDAE34"
-        "OwnerKey" = "8:_1EDF541999F94FD986D23E13BB18736C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -51,7 +39,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9745111612484CAAA5EF5EB3B6D6C50D"
+        "MsmKey" = "8:_82AAD473B07B4136CF6BA4A4E5B9B347"
+        "OwnerKey" = "8:_FFF96E3D8ED44D50A26FAF49AC01E2FF"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8DCB1F070A084893B83BD9DCA5246F63"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -63,8 +57,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7E8809570BAC4CC9996FED0E3FA3A93B"
+        "MsmKey" = "8:_FFF96E3D8ED44D50A26FAF49AC01E2FF"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,19 +70,25 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1EDF541999F94FD986D23E13BB18736C"
+        "OwnerKey" = "8:_FFF96E3D8ED44D50A26FAF49AC01E2FF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7947B6560C65250398C75769D7FDAE34"
+        "OwnerKey" = "8:_82AAD473B07B4136CF6BA4A4E5B9B347"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3D66E2B790C32758741F2A338CCC95D2"
+        "OwnerKey" = "8:_52C52A1C6524F846C05E7BE941A53E56"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7E8809570BAC4CC9996FED0E3FA3A93B"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -243,9 +243,9 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0B53E14A3AD945D6AB854FEAB78826DF"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_354BD3D1936C45E9B9332B20F6C13574"
             {
-            "SourcePath" = "8:..\\..\\..\\CIACS_win_client\\bin\\x64\\Release\\CIACS_win_client.pdb"
+            "SourcePath" = "8:..\\bin\\Release\\CIACS_win_client.pdb"
             "TargetName" = "8:CIACS_win_client.pdb"
             "Tag" = "8:"
             "Folder" = "8:_265FA04CD4D542DE80DCB6EA6C4FBF0A"
@@ -263,65 +263,14 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1EDF541999F94FD986D23E13BB18736C"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:CIACS_win_client, Version=1.0.0.0, Culture=neutral, processorArchitecture=AMD64"
-                "ScatterAssemblies"
-                {
-                    "_1EDF541999F94FD986D23E13BB18736C"
-                    {
-                    "Name" = "8:CIACS_win_client.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\..\\..\\CIACS_win_client\\bin\\x64\\Release\\CIACS_win_client.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_265FA04CD4D542DE80DCB6EA6C4FBF0A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_27E7C93C5FC74E76975AA8B610143140"
-            {
-            "SourcePath" = "8:..\\..\\..\\CIACS_win_client\\bin\\x64\\Release\\CIACS.pdb"
-            "TargetName" = "8:CIACS.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_265FA04CD4D542DE80DCB6EA6C4FBF0A"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3D66E2B790C32758741F2A338CCC95D2"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_52C52A1C6524F846C05E7BE941A53E56"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:CIACS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3D66E2B790C32758741F2A338CCC95D2"
+                    "_52C52A1C6524F846C05E7BE941A53E56"
                     {
                     "Name" = "8:CIACS.DLL"
                     "Attributes" = "3:512"
@@ -345,14 +294,34 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7947B6560C65250398C75769D7FDAE34"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7BB1E0084B2445CD83648A3C7A029397"
+            {
+            "SourcePath" = "8:..\\bin\\Release\\CIACS.pdb"
+            "TargetName" = "8:CIACS.pdb"
+            "Tag" = "8:"
+            "Folder" = "8:_265FA04CD4D542DE80DCB6EA6C4FBF0A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_82AAD473B07B4136CF6BA4A4E5B9B347"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7947B6560C65250398C75769D7FDAE34"
+                    "_82AAD473B07B4136CF6BA4A4E5B9B347"
                     {
                     "Name" = "8:Newtonsoft.Json.DLL"
                     "Attributes" = "3:512"
@@ -376,9 +345,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9745111612484CAAA5EF5EB3B6D6C50D"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8DCB1F070A084893B83BD9DCA5246F63"
             {
-            "SourcePath" = "8:..\\..\\..\\CIACS_win_client\\bin\\x64\\Release\\CIACS_win_client.exe.config"
+            "SourcePath" = "8:..\\bin\\Release\\CIACS_win_client.exe.config"
             "TargetName" = "8:CIACS_win_client.exe.config"
             "Tag" = "8:"
             "Folder" = "8:_265FA04CD4D542DE80DCB6EA6C4FBF0A"
@@ -425,6 +394,37 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FFF96E3D8ED44D50A26FAF49AC01E2FF"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:CIACS_win_client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FFF96E3D8ED44D50A26FAF49AC01E2FF"
+                    {
+                    "Name" = "8:CIACS_win_client.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\bin\\Release\\CIACS_win_client.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_265FA04CD4D542DE80DCB6EA6C4FBF0A"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -1005,7 +1005,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7E8809570BAC4CC9996FED0E3FA3A93B"
             {
-            "SourcePath" = "8:..\\InstallLib\\obj\\Release\\InstallLib.dll"
+            "SourcePath" = "8:..\\CIACSInstalllib\\obj\\x64\\Debug\\InstallLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_265FA04CD4D542DE80DCB6EA6C4FBF0A"
