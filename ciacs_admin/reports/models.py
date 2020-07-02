@@ -7,6 +7,8 @@ class Structure(models.Model):
     parent_id = models.ForeignKey('self', on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.name
 
 class Computers(models.Model):
     id = models.AutoField
@@ -18,70 +20,80 @@ class Computers(models.Model):
 
 
 class Os(models.Model):
-    name = models.CharField(max_length=50)
-    build = models.CharField(max_length=50)
-    bits = models.IntegerField(max_length=8)
+    id = models.AutoField
+    name = models.CharField(max_length=50, blank=True, null=True)
+    build = models.CharField(max_length=50, blank=True, null=True)
+    bits = models.IntegerField(max_length=8, blank=True, null=True)
+    computer_id = models.ForeignKey(Computers, default=None, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = (('id', 'computer_id'),)
 
 
 class Motherboards(models.Model):
-    id = models.AutoField(primary_key=True)
-    hardware_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
-    manufacturer = models.CharField(max_length=250)
-    name = models.CharField(max_length=50)
+    id = models.AutoField
+    computer_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
+    manufacturer = models.CharField(max_length=250, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
 
     class Meta:
-        unique_together = (('id', 'hardware_id'),)
+        unique_together = (('id', 'computer_id'),)
 
 
 class Cpus(models.Model):
-    id = models.AutoField(primary_key=True)
-    hardware_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
-    manufacturer = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    cores = models.IntegerField(max_length=4)
-    threads = models.IntegerField(max_length=5)
-    speed = models.IntegerField(max_length=5)
-    bits = models.IntegerField(max_length=8)
+    id = models.AutoField
+    computer_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
+    manufacturer = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    cores = models.IntegerField(max_length=4, blank=True, null=True)
+    threads = models.IntegerField(max_length=5, blank=True, null=True)
+    speed = models.IntegerField(max_length=5, blank=True, null=True)
+    bits = models.IntegerField(max_length=8, blank=True, null=True)
 
     class Meta:
-        unique_together = (('id', 'hardware_id'),)
+        unique_together = (('id', 'computer_id'),)
 
 
 class Gpus(models.Model):
-    id = models.AutoField(primary_key=True)
-    hardware_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
-    manufacturer = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    capacity = models.IntegerField(max_length=6)
+    id = models.AutoField
+    computer_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
+    manufacturer = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    capacity = models.IntegerField(max_length=15, blank=True, null=True)
 
     class Meta:
-        unique_together = (('id', 'hardware_id'),)
+        unique_together = (('id', 'computer_id'),)
 
 
 class Rams(models.Model):
-    id = models.AutoField(primary_key=True)
-    hardware_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
-    manufacturer = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    type = models.NullBooleanField
-    capacity = models.IntegerField(max_length=15)
+    id = models.AutoField
+    computer_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
+    manufacturer = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    type = models.CharField(max_length=50, blank=True, null=True)
+    capacity = models.IntegerField(max_length=15, blank=True, null=True)
 
     class Meta:
-        unique_together = (('id', 'hardware_id'),)
+        unique_together = (('id', 'computer_id'),)
 
 
 class Disks(models.Model):
-    id = models.AutoField(primary_key=True)
-    hardware_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
-    type = models.CharField(max_length=10)
-    capacity = models.IntegerField(max_length=50)
+    id = models.AutoField
+    computer_id = models.ForeignKey(Computers, on_delete=models.CASCADE)
+    type = models.CharField(max_length=10, blank=True, null=True)
+    capacity = models.IntegerField(max_length=50, blank=True, null=True)
 
     class Meta:
-        unique_together = (('id', 'hardware_id'),)
+        unique_together = (('id', 'computer_id'),)
 
 
 class Software(models.Model):
-    name = models.CharField(max_length=50)
-    version = models.CharField(max_length=50)
+    id = models.AutoField
+    name = models.CharField(max_length=250, blank=True, null=True)
+    version = models.CharField(max_length=250, blank=True, null=True)
+    computer_id = models.ForeignKey(Computers, default=None, on_delete=models.CASCADE)
+
+    class Meta:
+        unique_together = (('id', 'computer_id'),)
 
 
