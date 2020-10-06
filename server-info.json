@@ -5,22 +5,22 @@
 		{
 			"id": 1,
 			"name": "A",
-			"childs": [
+			"children": [
 				{
 					"id": 3,
 					"name": "A.1",
-					"childs": [
+					"children": [
 						{
 							"id": 6,
 							"name": "A.1.1",
-							"childs": [
+							"children": [
 
 							]
 						},
 						{
 							"id": 7,
 							"name": "A.1.2",
-							"childs": [
+							"children": [
 
 							]
 						}
@@ -29,11 +29,11 @@
 				{
 					"id": 4,
 					"name": "A.2",
-					"childs": [
+					"children": [
 						{
 							"id": 8,
 							"name": "A.2.1",
-							"childs": [
+							"children": [
 
 							]
 						}
@@ -44,11 +44,11 @@
 		{
 			"id": 2,
 			"name": "B",
-			"childs": [
+			"children": [
 				{
 					"id": 5,
 					"name": "B.1",
-					"childs": [
+					"children": [
 
 					]
 				}
